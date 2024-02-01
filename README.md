@@ -30,21 +30,25 @@ This is a Laravel project for managing company organization structures, employee
     npm install
     ```
 
-4. **Run Migrations:**
+4. **Copy env:**
+
+    ```bash
+    cp .env.example .env
+    ```
+
+5. **Run Migrations:**
 
     ```bash
     php artisan migrate
     ```
 
-5. **Seed the Database (Optional):**
-
-    If you have seeders, run:
+6. **Seed the Database (Optional):**
 
     ```bash
     php artisan db:seed
     ```
 
-6. **Start the Development Server:**
+7. **Start the Development Server:**
 
     ```bash
     php artisan serve
@@ -52,7 +56,7 @@ This is a Laravel project for managing company organization structures, employee
 
     Your application will be accessible at [http://localhost:8000](http://localhost:8000).
 
-7. **Compile Assets:**
+8. **Compile Assets:**
 
     ```bash
     npm run dev
