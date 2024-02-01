@@ -16,15 +16,13 @@ class AttendanceController extends Controller
 
     public function uploadExcel(Request $request)
     {
-
-        // $request->validate([
-        //     'file' => 'required|mimes:csv,xlsx,xls|max:10240',
-        // ]);
-
         $file = $request->file('file');
 
         $result = $this->attendanceService->uploadAttendanceData($file);
-        return response()->json($result, 200);
+        if($result['succes'] == true)
+            return response()->json($result, 200);
+        else
+            return response()->json($result, 500);
     }
 
     public function getEmployeeAttendanceInfo()

@@ -21,6 +21,9 @@ class AttendanceService
                     }
 
                     $employee = Employee::where('email', $data[0])->first();
+                    if(!$employee) {
+                        continue;
+                    }
 
                     if ($employee) {
                         Attendance::create([
